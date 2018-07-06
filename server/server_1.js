@@ -27,14 +27,14 @@ function response(req, res, next) {
         res.header("Content-Type", "application/json;charset=utf-8");
 
         console.log("POST /find/rapinfo");
-        res.send('{"RAP_IP": "10.1.1.1","RF_num": 3,"RFtype": "AAAA", "BTStype": "BBBB"}');
+        res.send('{"NAME": "CRAIG","SEX": m,"AGE": "37", "ID": "CRAIG37"}');
         };
 
 var server = restify.createServer();
 server.use(restify.plugins.bodyParser());
 server.use(restify.plugins.queryParser());
 server.use(restify.plugins.acceptParser(server.acceptable));
-server.post('/find/rapinfo',response);
+server.post('/find/userinfo',response);
 server.post('/userlogin',userlogin);
 
 server.listen(3912, function() {
