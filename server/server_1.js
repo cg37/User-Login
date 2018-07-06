@@ -26,7 +26,7 @@ function response(req, res, next) {
         res.header("X-Powered-By",' 3.2.1');
         res.header("Content-Type", "application/json;charset=utf-8");
 
-        console.log("POST /find/rapinfo");
+        console.log("POST /find/userinfo");
         res.send('{"NAME": "CRAIG","SEX": m,"AGE": "37", "ID": "CRAIG37"}');
         };
 
